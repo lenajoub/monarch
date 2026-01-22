@@ -170,26 +170,40 @@
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-24">
-        <div class="container mx-auto px-6 max-w-4xl glass p-12 rounded-3xl">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-serif font-bold mb-4 text-white">Ready to elevate?</h2>
-                <p class="text-gray-400">Tell us about your project and we'll get back to you within 24 hours.</p>
-            </div>
-            <form class="grid md:grid-cols-2 gap-6">
-                <input type="text" placeholder="Your Name" class="bg-black/30 border border-gray-700 p-4 rounded-lg focus:border-monarch-gold outline-none text-white">
-                <input type="email" placeholder="Email Address" class="bg-black/30 border border-gray-700 p-4 rounded-lg focus:border-monarch-gold outline-none text-white">
-                <textarea class="md:col-span-2 bg-black/30 border border-gray-700 p-4 rounded-lg focus:border-monarch-gold outline-none h-32 text-white" placeholder="Tell us about your vision..."></textarea>
-                <button class="md:col-span-2 bg-monarch-gold text-black font-bold py-5 rounded-lg hover:bg-white transition-all uppercase tracking-widest text-sm" type="submit" onclick="sendEmail()">Send Inquiry</button>
-            </form>
-        </div>
-    </section>
+   <!-- contact-form.html -->
+<section id="contact" class="py-24">
+  <div class="container mx-auto px-6 max-w-4xl glass p-12 rounded-3xl">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-serif font-bold mb-4 text-white">Ready to elevate?</h2>
+      <p class="text-gray-400">Tell us about your project and we'll get back to you within 24 hours.</p>
+    </div>
 
-    <footer class="py-12 border-t border-gray-800 text-center">
-        <p class="text-gray-500 text-sm">© 2026 Monarch Digital Agency. Built for the ambitious.</p>
-    </footer>
+    <!-- Give the form an id so the script can attach a handler -->
+    <form id="contact-form" class="grid md:grid-cols-2 gap-6" novalidate>
+      <input id="name" name="name" type="text" placeholder="Your Name" required
+             class="bg-black/30 border border-gray-700 p-4 rounded-lg focus:border-monarch-gold outline-none text-white">
 
+      <input id="email" name="email" type="email" placeholder="Email Address" required
+             class="bg-black/30 border border-gray-700 p-4 rounded-lg focus:border-monarch-gold outline-none text-white">
+
+      <input id="subject" name="subject" type="text" placeholder="Subject"
+             class="bg-black/30 border border-gray-700 p-4 rounded-lg focus:border-monarch-gold outline-none text-white">
+
+      <textarea id="message" name="message" placeholder="Tell us about your vision..."
+                class="md:col-span-2 bg-black/30 border border-gray-700 p-4 rounded-lg focus:border-monarch-gold outline-none h-32 text-white"
+                required></textarea>
+
+      <button id="send-button" class="md:col-span-2 bg-monarch-gold text-black font-bold py-5 rounded-lg hover:bg-white transition-all uppercase tracking-widest text-sm"
+              type="submit">
+        Send Inquiry
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- EmailJS SDK (must be loaded before your script) -->
+<script type="text/javascript" src="https://cdn.emailjs.com/sdk/3.6.2/email.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
             
