@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monarch | Premium Custom Web Development</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        monarch: {
+                            gold: '#d4a373',
+                            bg: '#0a1210', // Deep Forest/Emerald Black
+                            card: '#141f1d', // Subtle green-tinted dark gray
+                            accent: '#1b2b28'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass { background: rgba(20, 31, 29, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(212, 163, 115, 0.1); }
+        .hero-gradient { background: radial-gradient(circle at top right, #1b2b28, #0a1210); }
+        .hover-gold:hover { color: #d4a373; transition: 0.3s; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-monarch-bg text-gray-200 font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-serif font-bold tracking-tighter text-white">MONARCH<span class="text-monarch-gold">.</span></div>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-semibold">
+                <a href="#services" class="hover-gold">Services</a>
+                <a href="#why-monarch" class="hover-gold">Why Monarch?</a>
+                <a href="#portfolio" class="hover-gold">Portfolio</a>
+                <a href="#contact" class="bg-monarch-gold text-black px-5 py-2 rounded-full hover:bg-white transition-all">Start a Project</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="min-h-screen flex items-center pt-20 hero-gradient relative overflow-hidden">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="z-10">
+                <h1 class="text-6xl md:text-8xl font-serif font-bold mb-6 leading-none text-white">Digital <br><span class="text-monarch-gold">Excellence.</span></h1>
+                <p class="text-xl text-gray-400 mb-8 max-w-md leading-relaxed">Monarch builds high-performance, custom websites for brands that refuse to settle for templates.</p>
+                <div class="flex gap-4">
+                    <a href="#portfolio" class="px-8 py-4 border border-monarch-gold text-monarch-gold hover:bg-monarch-gold hover:text-black font-bold transition-all uppercase text-xs tracking-widest">View Work</a>
+                    <a href="#contact" class="px-8 py-4 bg-monarch-gold text-black font-bold hover:scale-105 transition-all uppercase text-xs tracking-widest">Inquire</a>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="w-full aspect-square bg-gradient-to-br from-monarch-gold to-transparent opacity-10 rounded-full blur-3xl absolute -top-20"></div>
+                <div class="glass p-8 rounded-2xl transform rotate-3 shadow-2xl">
+                    <div class="h-4 w-24 bg-monarch-gold mb-6 opacity-50"></div>
+                    <div class="space-y-4">
+                        <div class="h-2 w-full bg-gray-700"></div>
+                        <div class="h-2 w-4/5 bg-gray-700"></div>
+                        <div class="h-2 w-full bg-gray-700"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Monarch -->
+    <section id="why-monarch" class="py-24 border-b border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-serif font-bold mb-8 text-white">Why <span class="text-monarch-gold italic">Monarch?</span></h2>
+                    <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                        Marketing isn't just about being seen; it's about being remembered. We move away from generic builders to create high-conversion digital fingerprints.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="text-monarch-gold">✓</div>
+                            <div>
+                                <h4 class="font-bold text-white">Conversion Engineering</h4>
+                                <p class="text-sm text-gray-500">Every pixel is placed with the goal of turning visitors into loyal customers.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-monarch-gold">✓</div>
+                            <div>
+                                <h4 class="font-bold text-white">Speed & Performance</h4>
+                                <p class="text-sm text-gray-500">Custom-coded solutions that load instantly, ensuring zero lead drop-off.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-monarch-accent p-8 rounded-2xl text-center border border-white/5">
+                        <div class="text-3xl font-serif text-monarch-gold mb-2">94%</div>
+                        <div class="text-[10px] uppercase tracking-widest text-gray-500">First Impression Trust</div>
+                    </div>
+                    <div class="bg-monarch-gold p-8 rounded-2xl text-center text-black">
+                        <div class="text-3xl font-bold mb-2">100%</div>
+                        <div class="text-[10px] uppercase tracking-widest font-bold">Code Ownership</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-24 bg-monarch-accent/30">
+        <div class="container mx-auto px-6 text-center mb-16">
+            <h2 class="text-4xl font-serif font-bold mb-4 text-white">Our Services</h2>
+            <div class="w-20 h-1 bg-monarch-gold mx-auto"></div>
+        </div>
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-8 max-w-5xl">
+            <div class="p-10 glass hover:border-monarch-gold transition-all group">
+                <div class="text-4xl mb-6 font-serif italic text-monarch-gold">01</div>
+                <h3 class="text-2xl font-bold mb-4 group-hover:text-monarch-gold transition-colors text-white">Custom Landing Pages</h3>
+                <p class="text-gray-400 leading-relaxed">High-conversion pages built to turn visitors into customers using modern psychology and optimized technical architecture.</p>
+            </div>
+            <div class="p-10 glass hover:border-monarch-gold transition-all group">
+                <div class="text-4xl mb-6 font-serif italic text-monarch-gold">02</div>
+                <h3 class="text-2xl font-bold mb-4 group-hover:text-monarch-gold transition-colors text-white">Interactive 3D Sites</h3>
+                <p class="text-gray-400 leading-relaxed">Utilizing WebGL and Three.js to create immersive product showcases that move, respond, and captivate your audience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="py-24">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-end mb-12">
+            <div>
+                <h2 class="text-4xl font-serif font-bold text-white">Selected Works</h2>
+                <p class="text-gray-400 mt-2">A glimpse into the Monarch laboratory.</p>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12">
+            <a href="https://lenajoub.github.io/rota-grate/" target="_blank" class="group block">
+                <div class="overflow-hidden rounded-xl mb-6 aspect-video bg-monarch-accent flex items-center justify-center relative border border-white/5">
+                    <span class="text-2xl font-serif italic text-gray-500 group-hover:text-monarch-gold transition-all">Rota-Grate Experience</span>
+                    <div class="absolute inset-0 bg-monarch-gold/10 opacity-0 group-hover:opacity-100 transition-all flex items-center justify-center">
+                        <span class="bg-black text-white px-6 py-2 text-xs font-bold tracking-widest uppercase border border-monarch-gold">View Demo</span>
+                    </div>
+                </div>
+                <h3 class="text-xl font-bold mb-1 text-white">Rota-Grate Simulator</h3>
+                <p class="text-gray-500 uppercase text-xs tracking-widest">Interactive Landing Page</p>
+            </a>
+            <div class="group block opacity-50 cursor-not-allowed">
+                <div class="overflow-hidden rounded-xl mb-6 aspect-video bg-monarch-bg border border-dashed border-gray-700 flex items-center justify-center">
+                    <span class="text-xs font-bold text-gray-600 tracking-widest uppercase">Upcoming Project</span>
+                </div>
+                <h3 class="text-xl font-bold mb-1">Aura Skincare</h3>
+                <p class="text-gray-500 uppercase text-xs tracking-widest">Brand Experience</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-24">
+        <div class="container mx-auto px-6 max-w-4xl glass p-12 rounded-3xl">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-serif font-bold mb-4 text-white">Ready to elevate?</h2>
+                <p class="text-gray-400">Tell us about your project and we'll get back to you within 24 hours.</p>
+            </div>
+            <form class="grid md:grid-cols-2 gap-6">
+                <input type="text" placeholder="Your Name" class="bg-black/30 border border-gray-700 p-4 rounded-lg focus:border-monarch-gold outline-none text-white">
+                <input type="email" placeholder="Email Address" class="bg-black/30 border border-gray-700 p-4 rounded-lg focus:border-monarch-gold outline-none text-white">
+                <textarea class="md:col-span-2 bg-black/30 border border-gray-700 p-4 rounded-lg focus:border-monarch-gold outline-none h-32 text-white" placeholder="Tell us about your vision..."></textarea>
+                <button class="md:col-span-2 bg-monarch-gold text-black font-bold py-5 rounded-lg hover:bg-white transition-all uppercase tracking-widest text-sm">Send Inquiry</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-12 border-t border-gray-800 text-center">
+        <p class="text-gray-500 text-sm">© 2026 Monarch Digital Agency. Built for the ambitious.</p>
+    </footer>
+
+</body>
+</html>
