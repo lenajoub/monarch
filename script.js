@@ -16,7 +16,7 @@ function sendEmail() {
     }
 
     // Send email
-    emailjs.send("service_60l08mu", "template_l1bvw3s", params)
+    emailjs.send("service_3tlv1zi", "template_j20oybi", params)
         .then(() => {
             showMessage("Message sent successfully!", "success");
             document.getElementById("name").value = "";
