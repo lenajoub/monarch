@@ -16,7 +16,7 @@ function sendEmail() {
     }
 
     // 1️⃣ Send message to your inbox
-    emailjs.send("service_3tlv1zi", "template_l1bvw3s", params)
+    emailjs.send("service_3tlv1zi", "template_bualqbk", params)
         .then(() => {
             console.log("Your message sent successfully!");
         })
@@ -26,7 +26,7 @@ function sendEmail() {
         });
 
     // 2️⃣ Send auto-response to user
-    emailjs.send("service_3tlv1zi", "template_bualqbk", {
+    emailjs.send("service_3tlv1zi", "template_l1bvw3s", {
         name: params.name,
         email: params.email,
         message: params.message
