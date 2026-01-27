@@ -9,43 +9,38 @@ function sendEmail() {
         subject: "New Website Inquiry"
     };
 
-    // Validation
+    // Validate form
     if (!params.name || !params.email || !params.message) {
-        showMessage("Please fill in all required fields.", "error");
+        alert("Please fill in all required fields.");
         return;
     }
 
-    // Send email
-    emailjs.send("service_3tlv1zi", "template_j20oybi", params)
+    // 1️⃣ Send message to your inbox
+    emailjs.send("service_3tlv1zi", "template_l1bvw3s", params)
         .then(() => {
-            showMessage("Message sent successfully!", "success");
-            document.getElementById("name").value = "";
-            document.getElementById("email").value = "";
-            document.getElementById("message").value = "";
+            console.log("Your message sent successfully!");
         })
-        .catch(error => {
-            console.error("EmailJS Error:", error);
-            showMessage("Failed to send message. Please try again.", "error");
+        .catch(err => {
+            console.error("Failed to send your message:", err);
+            alert("Failed to send your message. Please try again.");
         });
-}
 
-// Slide-down message function
-function showMessage(message, type) {
-    const formMessage = document.getElementById("formMessage");
-    formMessage.textContent = message;
-
-    // Set color
-    formMessage.classList.remove("text-red-400", "text-green-400");
-    formMessage.classList.add(type === "success" ? "text-green-400" : "text-red-400");
-
-    // Animate in
-    formMessage.classList.add("opacity-100", "translate-y-0");
-    formMessage.classList.remove("translate-y-[-20px]");
-
-    // Animate out after 4 seconds
-    setTimeout(() => {
-        formMessage.classList.add("translate-y-[-20px]");
-        formMessage.classList.remove("opacity-100");
-        setTimeout(() => formMessage.textContent = "", 500);
-    }, 4000);
+    // 2️⃣ Send auto-response to user
+    emailjs.send("service_3tlv1zi", "template_bualqbk", {
+        name: params.name,
+        email: params.email,
+        message: params.message
+    })
+    .then(() => {
+        console.log("Auto-response sent to user!");
+        alert("Message sent successfully! A confirmation email has been sent to you.");
+        
+        // Clear form fields
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("message").value = "";
+    })
+    .catch(err => {
+        console.error("Failed to send auto-response:", err);
+    });
 }
