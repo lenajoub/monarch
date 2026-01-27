@@ -16,7 +16,7 @@ function sendEmail() {
     }
 
     // 1️⃣ Send message to your inbox
-    emailjs.send("service_3tlv1zi", "template_bualqbk", params)
+    emailjs.send("service_3tlv1zi","template_tpt5jlw", params)
         .then(() => {
             console.log("Your message sent successfully!");
         })
